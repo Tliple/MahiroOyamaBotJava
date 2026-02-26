@@ -4,6 +4,19 @@ target/
 !**/src/test/**/target/
 .kotlin
 
+config.properties
+*.db
+*.db-journal
+application.properties
+secrets.properties
+
+logs/
+*.log
+
+*.tmp
+*.temp
+*~
+
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml

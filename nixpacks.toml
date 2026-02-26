@@ -1,15 +1,8 @@
-# Настройка окружения для сборки
 [phases.setup]
-# Какие программы установить перед сборкой
 nixPkgs = ["openjdk21", "maven"]
 
-# Команды для сборки проекта
 [phases.install]
-# clean - очистить предыдущую сборку
-# package - создать JAR файл
-# -DskipTests - пропустить тесты (у нас их нет)
-cmds = ["mvn clean package -DskipTests"]
+cmds = ["mvn clean package -DskipTests -Dmaven.compiler.source=21 -Dmaven.compiler.target=21"]
 
-# Команда для запуска бота
 [start]
 cmd = "java -jar target/mahiro-oyama-bot-1.0-SNAPSHOT.jar"

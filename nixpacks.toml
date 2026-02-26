@@ -1,8 +1,0 @@
-[phases.setup]
-nixPkgs = ["openjdk21", "maven"]
-
-[phases.install]
-cmds = ["mvn clean package -DskipTests -Dmaven.compiler.source=21 -Dmaven.compiler.target=21"]
-
-[start]
-cmd = "java -jar target/mahiro-oyama-bot-1.0-SNAPSHOT.jar"
